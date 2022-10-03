@@ -64,9 +64,9 @@ class ChirpPolicy
      * @param  \App\Models\Chirp  $chirp
      * @return Response|bool
      */
-    public function delete(User $user, Chirp $chirp)
+    public function delete(User $user, Chirp $chirp): Response|bool
     {
-        //
+        return $this->update($user, $chirp);
     }
 
     /**
